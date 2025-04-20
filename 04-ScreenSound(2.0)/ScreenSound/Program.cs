@@ -1,12 +1,5 @@
 ﻿using ScreenSound.Menus;
 using ScreenSound.Modelos;
-using OpenAI.Chat;
-
-ChatClient client = new(model: "gpt-4o-mini", apiKey: "");
-
-ChatCompletion completion = client.CompleteChat("Resuma a banda Ira! em 1 parágrafo. Adote um estilo informal.");
-
-Console.WriteLine($"{completion.Content[0].Text}");
 
 Banda ira = new Banda("Ira!");
 ira.AdicionarNota(new Avaliacao(10));
@@ -67,5 +60,5 @@ void ExibirOpcoesDoMenu()
     }
 }
 
-//ExibirOpcoesDoMenu();
+ExibirOpcoesDoMenu();
 
